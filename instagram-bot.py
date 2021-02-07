@@ -31,9 +31,14 @@ driver.implicitly_wait(6)
 
 field = driver.find_element_by_xpath('//div[@class="LWmhU _0aCwM"]')
 field.click()
+driver.implicitly_wait(2)
+search_bar = driver.find_element_by_xpath('//input[@type="text"]')
+search_bar.send_keys('python'+Keys.ENTER)
 
-"""search_bar = driver.find_element_by_xpath('//div[@class="LWmhU _0aCwM"]/input[@class="XTCLo x3qfX"]')
-search_bar.send_keys('python'+Keys.ENTER)"""
+driver.implicitly_wait(3)
+
+acc = driver.find_element_by_xpath('//a[@class="-qQT3"]')
+acc.click()
 
 driver.implicitly_wait(3)
 
